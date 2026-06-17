@@ -41,47 +41,90 @@ body {
 /* Header */
 
 .header {
-    border-bottom: 1px solid var(--border);
-    background: white;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
 }
 
 .header .container {
-    height: 80px;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    height: 90px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    padding: 0 40px;
 }
 
 .logo {
-    font-size: 28px;
+    text-decoration: none;
+    color: #111;
+    font-size: 42px;
     font-weight: 800;
-    letter-spacing: -0.05em;
+    letter-spacing: -2px;
 }
 
 .nav {
     display: flex;
-    gap: 30px;
+    gap: 45px;
 }
 
 .nav a {
     text-decoration: none;
-    color: var(--text);
-    font-size: 14px;
+    color: #111;
+    font-size: 16px;
     font-weight: 500;
-    transition: opacity 0.2s;
-}
-
-.nav a:hover {
-    opacity: 0.6;
 }
 
 .icons {
     display: flex;
     gap: 18px;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #111;
+    font-size: 20px;
+}
+.search-container {
+    position: relative;
+}
+
+.search-icon {
     cursor: pointer;
+}
+
+.search-popup {
+    position: absolute;
+    top: 40px;
+    right: 0;
+
+    background: white;
+    padding: 15px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease;
+}
+
+.search-container:hover .search-popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-popup input {
+    width: 250px;
+    padding: 10px;
+
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #111;
+
+    font-family: "Inter", sans-serif;
 }
 
 /* Hero */
@@ -275,11 +318,14 @@ body {
 
 .footer {
     padding: 60px 40px;
+    text-align: center;
 }
 
 .footer-grid {
     display: flex;
-    gap: 80px;
+    justify-content: center;
+    gap: 120px;
+    text-align: center;
 }
 
 .footer h4 {
