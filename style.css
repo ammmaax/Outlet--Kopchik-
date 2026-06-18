@@ -207,7 +207,6 @@ body {
 .category-card {
     background: var(--light);
     height: 220px;
-
     display: flex;
     align-items: flex-end;
 
